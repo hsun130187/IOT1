@@ -5,8 +5,8 @@
 #include<string.h>
 /* Compilation Commands
 [x86]:
-gcc   -c hw.c -o hw.o
-gcc   -o hw hw.o -L/usr/lib/x86_64-linux-gnu -lcurl -lpthread
+gcc -c hw.c -o hw.o
+gcc -o hw hw.o -L/usr/lib/x86_64-linux-gnu -lcurl -lpthread
 [arm]:
 ${BUILDROOT_HOME}/output/host/usr/bin/arm-linux-gcc --sysroot=${BUILDROOT_HOME}/output/staging  -c hw.c -o hw.o
 ${BUILDROOT_HOME}/output/host/usr/bin/arm-linux-gcc --sysroot=${BUILDROOT_HOME}/output/staging  -o hw hw.o  -lcurl -uClibc -lc
