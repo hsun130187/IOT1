@@ -5,15 +5,21 @@
 #define INIT_ERR 1
 #define REQ_ERR  2
 
-#define URL    "http://0.0.0.0:80"
-
+//#define URL    "http://localhost:80"
+#define URL    "https://postb.in/1561923673161-1031376444734"
 int main(void){
+	char* postdata="this is a test";
+	
+	
 	CURL  *curl;
 	CURLcode res;
 	curl=curl_easy_init();
 	if(curl){
 		curl_easy_setopt(curl,CURLOPT_URL,URL);
-		curl_easy_setopt(curl,CURLOPT_FOLLOWLOCATION,1L);
+		
+		curl_easy_setopt(curl,CURLOPT_POSTFIELDS, postdata);
+
+		
 		res=curl_easy_perform(curl);
 		if(res!=CURLE_OK){
 			printf("req error");
