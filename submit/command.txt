@@ -1,0 +1,2 @@
+gcc   -c hw2.c -o hw2.o
+gcc   -o hw2 hw2.o -L/usr/lib/x86_64-linux-gnu -lcurl -lpthread
